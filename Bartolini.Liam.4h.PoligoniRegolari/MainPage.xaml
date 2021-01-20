@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skiaForm="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="Bartolini.Liam._4h.PoligoniRegolari.MainPage">
+
+    <Grid BackgroundColor="Beige">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout
+            Orientation="Horizontal"
+            Grid.Row="0"
+            >
+
+            <Button
+                Text="Disegna"
+                Clicked="Disegna"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="120"
+                />
+
+        </StackLayout>
+        
+        <skiaForm:SKCanvasView 
+            x:Name="TelaDaDisegno"
+            PaintSurface="Tela"
+            Grid.Row="1"
+            />
+    </Grid>
+</ContentPage>
